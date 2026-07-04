@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task-manager.css">
+</head>
+<body>
+    <a href="index.html" class="nav-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Hub
+    </a>
+
+    <div class="app-container">
+        <div class="app-window glass-card">
+            <!-- App Header -->
+            <div class="app-header">
+                <div class="app-title">
+                    <div class="app-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 Z"/></svg>
+                    </div>
+                    <h1>Tasks</h1>
+                </div>
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="search" id="search-input" placeholder="Search tasks...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Command Bar -->
+            <div class="command-bar-wrapper">
+                <form id="task-form" class="command-bar">
+                    <div class="cmd-input-wrapper">
+                        <textarea id="task-input" placeholder="What's next? (Shift+Enter for new line)" required rows="1"></textarea>
+                    </div>
+                    <div class="cmd-controls">
+                        <div class="cmd-date-wrapper">
+                            <input type="date" id="task-date" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary cmd-submit" aria-label="Add Task">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Task List -->
+            <div class="app-body">
+                <div id="task-list" class="task-list">
+                    <!-- Tasks will be injected here via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/task-manager.js"></script>
+</body>
+</html>

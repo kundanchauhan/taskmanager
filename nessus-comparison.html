@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nessus Comparison</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nessus-comparison.css">
+</head>
+<body>
+    <a href="index.html" class="nav-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Hub
+    </a>
+
+    <div class="container">
+        <header>
+            <h1>Nessus Comparison</h1>
+            <h2>Upload two scan files to compare results</h2>
+        </header>
+
+        <div class="comparison-container">
+            <div class="upload-section">
+                <!-- File 1 Dropzone -->
+                <div class="glass-card upload-card" id="dropzone1">
+                    <input type="file" id="file1" class="file-input" accept=".nessus,.csv,.xml">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                    <div class="upload-title">Base Scan File</div>
+                    <div class="upload-desc">Click to browse or drag and drop</div>
+                    <div class="file-status" id="status1"></div>
+                </div>
+
+                <!-- File 2 Dropzone -->
+                <div class="glass-card upload-card" id="dropzone2">
+                    <input type="file" id="file2" class="file-input" accept=".nessus,.csv,.xml">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                    <div class="upload-title">New Scan File</div>
+                    <div class="upload-desc">Click to browse or drag and drop</div>
+                    <div class="file-status" id="status2"></div>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="compare-btn" class="btn btn-primary btn-large btn-disabled" disabled>
+                    Compare Scans
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/nessus-comparison.js"></script>
+</body>
+</html>
